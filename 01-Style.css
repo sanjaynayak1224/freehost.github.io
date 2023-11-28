@@ -1,0 +1,132 @@
+/* Universal Selector-Applies the property for the entire document */
+*{
+   font-family: 'Courier New', Courier, monospace;
+   background-color: aquamarine;
+}
+
+/* Element Selector */
+h1,h3{
+    color: #B92b27;
+}
+
+/* ID selector-used to select one particular element */
+#login{
+    background-color: wheat;
+}
+
+#signup{
+    background-color: #B92b27;
+    color: white;
+}
+
+/* Class Selector-used to select a group of elements*/
+.upvote{
+    background-color: lightsalmon;
+    color:white;
+}
+
+/* Descendant Selector */
+.post a{
+    color: purple;
+    background-color: yellow;
+}
+
+nav a{
+    text-decoration: wavy underline;
+}
+
+nav ul li a{
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.google  a{
+    background-color: rgb(100, 36, 248);
+    color: blanchedalmond;
+}
+
+/* Adjacent Sibling Combinator
+In this case the h3 headings immediately written after paragraph tags will be applied with the following property */
+p+h3{ 
+    background-color: rgb(193, 186, 234);
+    text-decoration: double underline;
+    text-transform: uppercase;
+}
+
+.upvote + button{
+    background-color: blueviolet;
+}
+
+/* Child Combinator
+works only on immediate descendants which is a drawback of child combinator */
+div>input{
+    background-color: darksalmon;
+}
+
+/* Attribute Selector */
+input[type="text"]{
+    color: red;
+}
+
+input[type="password"]{
+    color: green;
+}
+
+input[type="text"],input[type="password"]{
+    height: 30px;
+    width: 300px;
+}
+
+/* Pseudo class:
+Hover */
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+h3:hover{
+    text-decoration: overline;
+}
+
+/* acitve */
+
+button:active{
+    background-color: hotpink;
+    color: black;
+}
+
+p:active{
+    font-weight: bold;
+    color: green
+}
+
+/* checked-used for radio button and checkbox button */
+
+input[type="radio"]:checked +label{
+    color: darkmagenta;
+    font-weight: bold;
+}
+
+/* nth-of-type */
+div:nth-of-type(2n){
+    background-color: lightcoral;
+}
+
+/* Pseudo Elements:
+first-letter */
+
+h1::first-letter{
+    color: black;
+}
+
+/* first-line */
+.Lorem::first-line{
+    color: purple;
+}
+
+/* selection */
+.Lorem::selection{
+    color: limegreen;
+    background-color: black;
+}
